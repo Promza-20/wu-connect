@@ -567,11 +567,11 @@ This project is an independent prototype and does not grant rights to third-part
 ## Author
 
 **Project:** WU Connect  
-**Developer:** YOUR_NAME  
-**GitHub:** https://github.com/YOUR_USERNAME
+**Developer:** Promedi Ilunga  
+**GitHub:** https://github.com/Promza-20
 
 WU Connect is being developed as a learning project focused on Python, web development, mobile application development, APIs and financial technology concepts.
 
 ---
 
-*Last updated: YYYY-MM-DD*
+
