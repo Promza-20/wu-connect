@@ -1,0 +1,106 @@
+
+import flet as ft
+
+
+def main(page: ft.Page):
+    page.title = "WU Connect"
+    page.theme_mode = ft.ThemeMode.LIGHT
+    page.bgcolor = "#F7F8FA"
+    page.padding = 24
+    page.scroll = ft.ScrollMode.AUTO
+
+    def show_message(message):
+        page.open(ft.SnackBar(ft.Text(message)))
+
+    page.add(
+        ft.Container(
+            content=ft.Column(
+                controls=[
+                    ft.Text(
+                        "WU CONNECT",
+                        size=15,
+                        weight=ft.FontWeight.BOLD,
+                        color="#D9A500",
+                    ),
+                    ft.Text(
+                        "Money transfers, made simpler.",
+                        size=30,
+                        weight=ft.FontWeight.BOLD,
+                        color="#171717",
+                    ),
+                    ft.Text(
+                        "Your money transfer dashboard",
+                        size=15,
+                        color="#666666",
+                    ),
+                    ft.Divider(),
+                    ft.Text("Welcome", size=22,
+                            weight=ft.FontWeight.BOLD),
+                    ft.Text(
+                        "Manage your transfers from one place."
+                    ),
+                    ft.Container(
+                        content=ft.Column(
+                            controls=[
+                                ft.Text("SEND MONEY", size=13,
+                                        color="#666666"),
+                                ft.Text("Start a transfer",
+                                        size=22,
+                                        weight=ft.FontWeight.BOLD),
+                                ft.Text(
+                                    "Choose a destination and "
+                                    "explore transfer options."
+                                ),
+                                ft.Button(
+                                    "Start transfer",
+                                    on_click=lambda e: show_message(
+                                        "Demo only: no money is sent."
+                                    ),
+                                    style=ft.ButtonStyle(
+                                        bgcolor="#F5C400",
+                                        color="#171717",
+                                    ),
+                                ),
+                            ],
+                            spacing=12,
+                        ),
+                        bgcolor="#FFFFFF",
+                        padding=20,
+                        border_radius=16,
+                    ),
+                    ft.Text("YOUR SERVICES", size=13,
+                            weight=ft.FontWeight.BOLD),
+                    ft.Button(
+                        "Track a transfer",
+                        on_click=lambda e: show_message(
+                            "Transfer tracking is coming soon."
+                        ),
+                    ),
+                    ft.Button(
+                        "Transaction history",
+                        on_click=lambda e: show_message(
+                            "Transaction history is coming soon."
+                        ),
+                    ),
+                    ft.Button(
+                        "Sign in",
+                        on_click=lambda e: show_message(
+                            "Customer authentication is not "
+                            "implemented yet."
+                        ),
+                    ),
+                    ft.Text(
+                        "Prototype only • No real transactions",
+                        size=12,
+                        color="#777777",
+                    ),
+                ],
+                spacing=18,
+            ),
+            width=600,
+        )
+    )
+
+
+ft.run(main)
+ 
